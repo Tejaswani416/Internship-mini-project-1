@@ -1,0 +1,238 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a,
+        #312e81
+    );
+    color:white;
+    min-height:100vh;
+}
+
+.dashboard{
+    padding:30px;
+}
+
+.dashboard h1{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:40px;
+    text-shadow:0 0 15px cyan;
+}
+
+
+/* top cards */
+
+.top-section{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.weather-card,
+.security-card{
+    width:250px;
+    padding:25px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+
+    text-align:center;
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,.4);
+
+    transition:0.4s;
+}
+
+.weather-card:hover,
+.security-card:hover{
+    transform:translateY(-10px);
+}
+
+
+/* devices */
+
+.title{
+    margin-top:35px;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+
+.device-container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+
+.device-card{
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(12px);
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 0 15px rgba(0,0,0,0.5);
+}
+
+
+.device-card:hover{
+    transform:scale(1.08);
+}
+
+
+.active{
+    box-shadow:
+    0 0 30px #00ffcc;
+}
+
+
+.device-card button{
+
+    margin-top:15px;
+
+    padding:10px 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#00e5ff;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+.device-card button:hover{
+
+    background:white;
+
+    transform:scale(1.1);
+
+}
+
+
+/* Energy */
+
+.energy-section{
+
+    max-width:700px;
+
+    margin:20px auto;
+
+}
+
+
+.energy-card{
+
+    margin:20px 0;
+
+}
+
+
+.bar{
+
+    height:25px;
+
+    background:#222;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+
+.fill{
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    border-radius:30px;
+
+    animation: load 2s ease;
+}
+
+
+.lights{
+
+    width:65%;
+
+    background:#facc15;
+
+}
+
+
+.ac{
+
+    width:85%;
+
+    background:#06b6d4;
+
+}
+
+
+.tv{
+
+    width:40%;
+
+    background:#a855f7;
+
+}
+
+
+@keyframes load{
+
+    from{
+
+        width:0;
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.dashboard h1{
+
+    font-size:28px;
+
+}
+
+}
